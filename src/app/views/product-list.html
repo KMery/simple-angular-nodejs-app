@@ -1,0 +1,25 @@
+<h3>{{titulo}}</h3>
+
+<div *ngIf="!products">
+    <p>Cargando productos...</p>
+</div>
+
+
+<div *ngIf="products">
+    <ul>
+        <li *ngFor="let p of products">
+            <strong>{{ p.plate }}</strong> 
+            <p>price: ${{ p.price }}</p>
+            <div *ngIf="confirm != p.id">
+                <a [routerLink]="['/product', p.id]" class="badge badge-primary">Ver</a>
+                <a [routerLink]="['/edit-product', p.id]" class="badge badge-warning">Editar</a>
+                <a (click)="deleteConfirm(p.id)" class="badge badge-danger">Borrar</a>
+            </div>
+            <div *ngIf="confirm == p.id">
+                <p>Estas seguro de querer borrar este producto?</p>
+                <a (click)="onDeleteProduct(p.id)" class="btn btn-md btn-danger">Eliminar</a>
+                <a (click)="cancelConfirm()" class="btn btn-md btn-primary">Cancelar</a>
+            </div>
+        </li>
+    </ul>
+</div>

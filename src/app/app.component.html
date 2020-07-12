@@ -1,0 +1,33 @@
+<div class="container-fluid">
+  <div class="row justify-content-md-center"> 
+    <div id="content" class="col-lg-10">
+      <header>
+        <h1 id="header" class="col-lg-12">
+          {{title}}
+        </h1>
+      </header>
+      <nav id="nav" class="col-lg-12">
+        <ul>
+          <li><a [routerLink]="['/home']" [routerLinkActive]="['router-link-active']">Home</a></li>
+          <li><a [routerLink]="['/products']" [routerLinkActive]="['router-link-active']">Productos</a></li>
+          <li><a [routerLink]="['/add-products']" [routerLinkActive]="['router-link-active']">Crear producto</a></li>
+        </ul>
+      </nav>
+      <br>
+      <section id="main" class="col-lg-12">
+        <!-- Componente actual -->
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus iste tempore nesciunt nobis accusantium quae sed illo necessitatibus animi reiciendis, asperiores doloremque sequi repellendus dolorem vero nam, autem perspiciatis totam.
+        </p>
+        <div class="row justify-content-md-center">
+          <!-- <home></home> -->
+          <router-outlet></router-outlet>
+        </div>
+      </section>
+      <footer class="col-lg-12">
+        <p>By KMery 2020</p>
+      </footer>
+    </div>    
+  </div>
+  </div>
+  

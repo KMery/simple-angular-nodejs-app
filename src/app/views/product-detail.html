@@ -1,0 +1,11 @@
+<h3>Detalle de producto</h3>
+
+<div *ngIf="product">
+    <!-- <img src="" alt="No img :C"> -->
+    <h5> <strong>Nombre del plato: </strong> {{product.plate}} </h5>
+    <h5> Precio: {{product.price}} </h5>
+</div>
+
+<div *ngIf="!product">
+    <p>Cargando producto...</p>
+</div>

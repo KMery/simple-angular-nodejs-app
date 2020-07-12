@@ -1,0 +1,26 @@
+<h3> {{titulo}} </h3>
+<hr>
+
+<form #formProduct="ngForm" id="form-product" (ngSubmit)="onSubmit()"> 
+    <label>
+        Plato
+        <br>
+        <span *ngIf="!plato.valid && plato.touched" class="badge badge-warning"><strong>El nombre del plato es obligatorio</strong></span>
+    </label>
+    <input type="text" class="form-control" #plato="ngModel" name="plate" [(ngModel)]="product.plate" required>
+    
+    <br>
+    <label>
+        Precio
+        <br>
+        <span *ngIf="!precio.valid && precio.touched" class="badge badge-warning"><strong>El precio no es correcto</strong></span>
+    </label>
+    <!-- pattern="^[1-9]{1,4}+(\.\d{1,2})?" -->
+    <input type="text" class="form-control" #precio="ngModel" name="price" [(ngModel)]="product.price" required pattern="^([1-9]*|\d*\.\d{1}?\d*)$">
+    
+    <br>
+    <label>Imagen</label>
+    <input type="file" class="form-control">
+    <br>
+    <input type="submit" value="{{titulo}}" class="btn btn-success" [disabled]="!formProduct.form.valid">
+</form>
