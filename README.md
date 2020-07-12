@@ -22,12 +22,12 @@ These are the links to download:
     [NodeJS Downloads](https://nodejs.org/es/download/)
     Apache distribution containing MariaDB, PHP, and Perl [XAMPP] (https://www.apachefriends.org/download.html)
 
-<h4>**Installing**</h4>
+<h4>**Installing server**</h4>
 
 A step by step series of examples that tell you how to get a development env running
 
     1- clone the repository this repository
-    git clone https://github.com/KMery/simple-angular-nodejs-mysql-app.git
+    **git clone https://github.com/KMery/simple-crud-nodejs-mysql/**
 
     2- Change directory with cd ~/simple-angular-nodejs-mysql-app/src/server
 
